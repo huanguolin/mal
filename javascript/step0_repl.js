@@ -22,7 +22,7 @@ function main () {
     const EOF = 4;
     
     process.stdin.setEncoding('utf8');
-    process.stdout.write('> ');
+    process.stdout.write('user> ');
     process.stdin.on('readable', () => {
         const chunk = process.stdin.read();
         const string = String(chunk);
@@ -36,7 +36,7 @@ function main () {
         if (chunk !== null) {
             const res = rep(string);
             process.stdout.write(res);
-            process.stdout.write('> ');
+            process.stdout.write('user> ');
         }     
     });
     
